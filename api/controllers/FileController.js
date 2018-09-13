@@ -21,7 +21,7 @@ module.exports = {
 
         request.file('file').upload({ 
             dirname: path.resolve(sails.config.appPath, UPLOAD_PATH) 
-        },function(error, absoluteFile) {
+        }, function(error, absoluteFile) {
 
             var fileDescriptor = absoluteFile[0].fd;
             var filename = fileDescriptor.replace(/^.*[\\\/]/, '')
@@ -50,7 +50,7 @@ module.exports = {
     },
 
     getFile: function (request, response) {
-        response.sendfile(request.path.substr(1), function(error, result) {
+        response.sendfile(request.path.substr(1), function(error, _) {
             if (error) {
                 return response.json(404, {
                     message: 'file not found'
