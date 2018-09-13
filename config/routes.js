@@ -34,6 +34,14 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
+  },
+  'get /public/images/*': {
+    controller: 'FileController',
+    action: 'getFile'
+  },
+  'post /images': {
+    controller: 'FileController',
+    action: 'uploadFile'
   }
 
   /***************************************************************************

@@ -36,5 +36,9 @@
     "url": "git://github.com/isfaaghyth/testapi.git"
   },
   "author": "isfaaghyth",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "shortid": "^2.2.13"
+  }
 }
